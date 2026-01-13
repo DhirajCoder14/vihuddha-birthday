@@ -1,212 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>🎉 Happy Birthday Best Friend 🎂</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🎉 Happy Birthday Best Friend 🎂</title>
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }
+    <style>
+        :root {
+            --pink: #ff4f81;
+            --dark: #333;
+            --white: #fff;
+        }
 
-    body {
-      background: linear-gradient(120deg, #ff758c, #ff7eb3, #fad0c4);
-      min-height: 100vh;
-      overflow-x: hidden;
-    }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
 
-    /* HERO SECTION */
-    .hero {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      color: white;
-      padding: 20px;
-    }
+        body {
+            background: linear-gradient(120deg, #ff758c, #ff7eb3, #fad0c4);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
 
-    .hero h1 {
-      font-size: 4.5rem;
-      font-weight: 800;
-      text-shadow: 0 10px 30px rgba(0,0,0,0.4);
-      animation: pop 1.2s ease-in-out;
-    }
+        /* HERO SECTION */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 40px 20px;
+        }
 
-    .hero h2 {
-      margin-top: 15px;
-      font-size: 2rem;
-      font-weight: 400;
-      opacity: 0.95;
-    }
+        .hero h1 {
+            font-size: clamp(2.8rem, 6vw, 5rem);
+            font-weight: 800;
+            text-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            animation: pop 1.2s ease-in-out;
+        }
 
-    @keyframes pop {
-      0% { transform: scale(0.8); opacity: 0; }
-      100% { transform: scale(1); opacity: 1; }
-    }
+        .hero h2 {
+            margin-top: 15px;
+            font-size: clamp(1.2rem, 3vw, 2rem);
+            font-weight: 400;
+            opacity: 0.95;
+        }
 
-    /* SECTION WRAPPER */
-    section {
-      padding: 100px 20px;
-    }
+        @keyframes pop {
+            0% {
+                transform: scale(0.85);
+                opacity: 0;
+            }
 
-    /* PHOTO SECTION */
-    .photo-section {
-      background: #fff;
-      border-top-left-radius: 80px;
-      border-top-right-radius: 80px;
-      text-align: center;
-    }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
 
-    .photo-section h3 {
-      font-size: 3rem;
-      margin-bottom: 50px;
-      color: #ff4f81;
-    }
+        /* SECTION */
+        section {
+            padding: clamp(60px, 10vw, 120px) 20px;
+        }
 
-    .photos {
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      flex-wrap: wrap;
-    }
+        /* PHOTO SECTION */
+        .photo-section {
+            background: var(--white);
+            border-top-left-radius: 80px;
+            border-top-right-radius: 80px;
+            text-align: center;
+        }
 
-    .photos img {
-      width: 320px;
-      height: 420px;
-      object-fit: cover;
-      border-radius: 30px;
-      box-shadow: 0 25px 40px rgba(0,0,0,0.25);
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
-    }
+        .photo-section h3 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            margin-bottom: 50px;
+            color: var(--pink);
+        }
 
-    .photos img:hover {
-      transform: translateY(-15px) scale(1.05);
-      box-shadow: 0 35px 60px rgba(0,0,0,0.35);
-    }
+        .photos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 40px;
+            max-width: 1100px;
+            margin: auto;
+        }
 
-    /* MESSAGE SECTION */
-    .message-section {
-      background: linear-gradient(135deg, #fff1eb, #ace0f9);
-      text-align: center;
-    }
+        .photos img {
+            width: 100%;
+            height: 420px;
+            object-fit: cover;
+            border-radius: 30px;
+            box-shadow: 0 25px 40px rgba(0, 0, 0, 0.25);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
 
-    .message-box {
-      max-width: 900px;
-      margin: auto;
-      background: white;
-      padding: 60px;
-      border-radius: 40px;
-      box-shadow: 0 30px 60px rgba(0,0,0,0.25);
-    }
+        .photos img:hover {
+            transform: translateY(-12px) scale(1.04);
+            box-shadow: 0 35px 60px rgba(0, 0, 0, 0.35);
+        }
 
-    .message-box h3 {
-      font-size: 3rem;
-      margin-bottom: 30px;
-      color: #ff4f81;
-    }
+        /* MESSAGE SECTION */
+        .message-section {
+            background: linear-gradient(135deg, #fff1eb, #ace0f9);
+        }
 
-    .message-box p {
-      font-size: 1.4rem;
-      line-height: 1.9;
-      color: #333;
-      margin-bottom: 20px;
-    }
+        .message-box {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: clamp(30px, 6vw, 70px);
+            border-radius: 40px;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25);
+            text-align: center;
+        }
 
-    /* FOOTER */
-    footer {
-      padding: 60px 20px;
-      text-align: center;
-      color: white;
-    }
+        .message-box h3 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            margin-bottom: 30px;
+            color: var(--pink);
+        }
 
-    footer p {
-      font-size: 1.2rem;
-      opacity: 0.9;
-    }
+        .message-box p {
+            font-size: clamp(1.05rem, 2.5vw, 1.4rem);
+            line-height: 1.9;
+            color: var(--dark);
+            margin-bottom: 20px;
+        }
 
-    /* RESPONSIVE */
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 3rem;
-      }
+        /* FOOTER */
+        footer {
+            padding: 60px 20px;
+            text-align: center;
+            color: white;
+        }
 
-      .hero h2 {
-        font-size: 1.5rem;
-      }
+        footer p {
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
+            opacity: 0.9;
+        }
 
-      .photos img {
-        width: 260px;
-        height: 340px;
-      }
+        /* EXTRA SMALL DEVICES */
+        @media (max-width: 480px) {
+            .photo-section {
+                border-top-left-radius: 40px;
+                border-top-right-radius: 40px;
+            }
 
-      .message-box {
-        padding: 40px 25px;
-      }
+            .photos img {
+                height: 300px;
+            }
 
-      .message-box h3 {
-        font-size: 2.2rem;
-      }
-
-      .message-box p {
-        font-size: 1.2rem;
-      }
-    }
-  </style>
+            .message-box {
+                border-radius: 25px;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-  <!-- HERO -->
-  <div class="hero">
-    <h1>🎂 Happy Birthday 🎉</h1>
-    <h2>To the Most Amazing Best Friend 💖</h2>
-  </div>
-
-  <!-- PHOTOS -->
-  <section class="photo-section">
-    <h3>Our Memories ✨</h3>
-    <div class="photos">
-      <!-- Replace these images -->
-      <img src="one.jpeg" alt="Best Friend Photo 1">
-      <img src="two.jpeg" alt="Best Friend Photo 2">
+    <!-- HERO -->
+    <div class="hero">
+        <h1>🎂 Happy Birthday 🎉</h1>
+        <h2>To the Most Amazing Best Friend 💖</h2>
     </div>
-  </section>
 
-  <!-- MESSAGE -->
-  <section class="message-section">
-    <div class="message-box">
-      <h3>A Special Message 💌</h3>
-      <p>
-        Happy Birthday to the one who makes every day brighter just by being in it. 🌟
-        You are not just my best friend, you are my family, my support, and my biggest blessing.
-      </p>
-      <p>
-        Thank you for all the laughs, crazy memories, late-night talks, and moments that I will
-        treasure forever. Life feels easier and happier with you by my side.
-      </p>
-      <p>
-        May this year bring you endless happiness, success, good health, and everything your heart desires.
-        Never stop smiling and being the amazing person you are. 🎈🎁🎂
-        
-        <br><br><br>
+    <!-- PHOTOS -->
+    <section class="photo-section">
+        <h3>Handsome Boyy ✨</h3>
+        <div class="photos">
+            <img src="one.jpeg" alt="Best Friend Photo 1">
+            <img src="two.jpeg" alt="Best Friend Photo 2">
+        </div>
+    </section>
 
-        "AUR HAA , PAKISTAN KI........"
-      </p>
-    </div>
-  </section>
+    <!-- MESSAGE -->
+    <section class="message-section">
+        <div class="message-box">
+            <h3>A Special Message 💌</h3>
+            <p>
+                Happy Birthday to the one who makes every day brighter just by being in it. 🌟
+                You are not just my best friend, you are my family, my support, and my biggest blessing.
+            </p>
+            <p>
+                Thank you for all the laughs, crazy memories, late-night talks, and moments that I will
+                treasure forever. Life feels easier and happier with you by my side.
+            </p>
+            <p>
+                May this year bring you endless happiness, success, good health, and everything your heart desires.
+                Never stop smiling and being the amazing person you are. 🎈🎁🎂
+            </p>
+            <p>
+               " AUR HAA , PAKISTAN KI....."
+            </p>
+        </div>
+    </section>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>Made with ❤️ by your best friend</p>
-  </footer>
+    <!-- FOOTER -->
+    <footer>
+        <p>Made with ❤️ by your  friend(@coder_dhiraj01)</p>
+    </footer>
 
 </body>
+
 </html>
